@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="./images/videoLogo.png"
+			style="object-fit: cover" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Terms & Conditions</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Inter", sans-serif;
+			}
+
+			:root {
+				--primary-color: #ff6c07;
+				--dark-bg: #121212;
+				--text-color: #ffffff;
+				--button-border: rgba(255, 255, 255, 0.1);
+			}
+			html {
+				overflow-x: hidden;
+			}
+			body {
+				background-color: var(--text-color);
+				color: var(--dark-bg);
+				line-height: 1.5;
+				overflow-x: hidden;
+			}
+
+			.header {
+				padding: 0.7rem 7rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: fixed;
+				/* width: 100%; */
+				width: calc(100% - 0px);
+				/* background-color: rgba(18, 18, 18, 0.95); */
+				background-color: white;
+				z-index: 1000;
+				border-bottom: 1px solid var(--button-border);
+				box-sizing: border-box;
+			}
+
+			.logo {
+				/* width: 150px; */
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2.5rem;
+			}
+
+			.nav-links a {
+				color: var(--dark-bg);
+				text-decoration: none;
+				font-size: 0.9rem;
+				font-weight: 500;
+				letter-spacing: 0.5px;
+				&:hover {
+					color: var(--primary-color);
+				}
+			}
+
+			.nav-links a.active {
+				color: var(--primary-color);
+			}
+
+			.sign-in-btn-head {
+				padding: 1rem 1.75rem;
+				/* border: 1px solid var(--button-border); */
+				border-radius: 6px;
+				background: var(--dark-bg);
+				color: var(--text-color);
+				cursor: pointer;
+				font-weight: 500;
+				font-size: 0.9rem;
+				transition: all 0.3s ease;
+				/* border-color: var(--primary-color); */
+				border: none;
+			}
+
+			.sign-in-btn-head:hover {
+				background-color: var(--primary-color);
+				color: white;
+			}
+			.sign-in-btn {
+				padding: 1rem 1.75rem;
+				border: 1px solid var(--button-border);
+				border-radius: 6px;
+				background: var(--dark-bg);
+				color: var(--primary-color);
+				cursor: pointer;
+				font-weight: 500;
+				font-size: 0.9rem;
+				transition: all 0.3s ease;
+				border-color: var(--primary-color);
+				&:hover {
+					background-color: white;
+					color: black;
+				}
+			}
+			#phone-img {
+				position: absolute;
+				width: 220px;
+				right: 80px;
+				bottom: 10px;
+			}
+			.hero {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 6rem 2rem 2rem;
+				background-color: var(--dark-bg);
+				position: relative;
+				overflow: hidden;
+				background-image: linear-gradient(
+						rgba(0, 0, 0, 0.1),
+						rgba(0, 0, 0, 0.1)
+					),
+					url("./images/bg1.jpeg");
+				background-size: cover;
+				background-position: center;
+			}
+
+			.hero-content {
+				/* max-width: 800px; */
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
+				padding-top: 39px;
+			}
+
+			.hero h1 {
+				font-size: 60px;
+				font-weight: 700;
+				line-height: 1.2;
+				margin-bottom: 0.1rem;
+				/* letter-spacing: -1px; */
+			}
+
+			.hero p {
+				font-size: 1.1rem;
+				margin-bottom: 2.5rem;
+				color: rgba(255, 255, 255, 0.8);
+				letter-spacing: 1px;
+			}
+
+			.hero-image {
+				margin-top: 4rem;
+				width: 100%;
+				max-width: 1000px;
+				position: relative;
+			}
+			#laptop-img {
+				width: 800px;
+			}
+
+			.partners {
+				padding: 5rem 2.5rem;
+				text-align: center;
+				background-color: var(--dark-bg);
+			}
+
+			.partners h2 {
+				color: var(--primary-color);
+				font-size: 2.5rem;
+				margin-bottom: 3rem;
+			}
+
+			.partner-grid {
+				display: grid;
+				grid-template-columns: repeat(6, 1fr);
+				gap: 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding-bottom: 60px;
+				justify-items: center;
+				align-content: center;
+				img {
+					width: 90px;
+				}
+			}
+
+			.features {
+				padding: 5rem 2.5rem;
+				text-align: center;
+				background-color: var(--dark-bg);
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 3rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.feature-card {
+				text-align: center;
+			}
+
+			.feature-icon {
+				width: 64px;
+				height: 64px;
+				margin: 0 auto;
+				color: var(--primary-color);
+			}
+
+			.feature-card h3 {
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+				font-weight: 600;
+			}
+
+			.feature-card p {
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 0.95rem;
+				line-height: 1.6;
+			}
+
+			.stats {
+				padding: 6rem 2.5rem;
+				background-color: white;
+			}
+
+			.stats-wrapper {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.stats-header {
+				margin-bottom: 2rem;
+				max-width: 800px;
+			}
+
+			.stats-title {
+				font-size: 3.5rem;
+				line-height: 1.1;
+				color: #121212;
+				margin-bottom: 1.5rem;
+				font-weight: 800;
+				letter-spacing: -0.5px;
+			}
+
+			.stats-subtitle {
+				color: #666;
+				font-size: 1.25rem;
+				line-height: 1.5;
+				max-width: 500px;
+			}
+
+			.stats-content {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 8rem;
+			}
+
+			.stats-info {
+				flex: 1;
+			}
+
+			.stats-numbers {
+				display: flex;
+				gap: 5rem;
+				margin-bottom: 2rem;
+			}
+
+			.stat-item h2 {
+				font-size: 3.75rem;
+				font-weight: 800;
+				color: #121212;
+				margin-bottom: 0.75rem;
+				line-height: 1;
+			}
+
+			.stat-item p {
+				color: #666;
+				font-size: 1.125rem;
+			}
+
+			.join-us-btn {
+				background-color: var(--dark-bg);
+				color: white;
+				padding: 1rem 2.5rem;
+				border: none;
+				border-radius: 8px;
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.join-us-btn:hover {
+				background-color: var(--primary-color);
+			}
+
+			.stats-media {
+				flex: 1;
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			.stats-media img {
+				width: 458px;
+				height: auto;
+			}
+
+			@media (max-width: 1024px) {
+				.stats-content {
+					gap: 4rem;
+				}
+
+				.stats-title {
+					font-size: 3rem;
+				}
+			}
+
+			@media (max-width: 768px) {
+				body {
+					overflow-x: hidden;
+				}
+				.header {
+					padding: 1.25rem 2rem;
+				}
+				.hero-image img {
+					width: 310px !important;
+				}
+				#phone-img {
+					display: none;
+				}
+				.stats {
+					padding: 4rem 2rem;
+				}
+
+				.stats-content {
+					flex-direction: column;
+					gap: 3rem;
+				}
+
+				.stats-numbers {
+					flex-direction: column;
+					gap: 2rem;
+				}
+
+				.stats-title {
+					font-size: 2.3rem;
+					text-align: center;
+				}
+
+				.stats-media video {
+					width: 100%;
+					max-width: 400px !important;
+				}
+				.stat-item h2 {
+					text-align: center;
+				}
+				.stat-item p {
+					text-align: center;
+				}
+				.stats-info {
+					text-align: center;
+				}
+			}
+			.footer {
+				background-color: var(--dark-bg);
+				padding: 4rem 2.5rem;
+				border-top: 1px solid var(--button-border);
+			}
+
+			.footer-content {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 4rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.footer-section {
+				min-width: 400px;
+			}
+			.footer-section:nth-child(1) {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+			}
+			.footer-section img {
+				width: 170px;
+				cursor: pointer;
+			}
+			.footer-section h3 {
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 0.9rem;
+				margin-bottom: 1.5rem;
+				font-weight: 600;
+			}
+
+			.footer-section p,
+			.footer-section a {
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 0.9rem;
+				line-height: 1.8;
+				text-decoration: none;
+			}
+
+			.footer-section a:hover {
+				color: var(--primary-color);
+			}
+
+			.hamburger {
+				display: none;
+				font-size: 1.9rem;
+				background: none;
+				border: none;
+				color: var(--dark-bg);
+				cursor: pointer;
+			}
+
+			.mobile-menu {
+				display: block;
+				position: fixed;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100vh;
+				background-color: var(--dark-bg);
+				padding: 2rem;
+				z-index: 1001;
+				transition: left 0.3s ease-in-out;
+				opacity: 0;
+			}
+
+			.mobile-menu.active {
+				left: 0;
+				opacity: 1;
+			}
+
+			.mobile-menu nav {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				margin-top: 3rem;
+				opacity: 0;
+				transform: translateX(-20px);
+				transition: all 0.4s ease-in-out;
+			}
+
+			.mobile-menu.active nav {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+			.mobile-menu a {
+				color: var(--text-color);
+				text-decoration: none;
+				font-size: 1.1rem;
+				padding: 0.5rem 0;
+				transition: color 0.3s ease;
+			}
+
+			.mobile-menu a:hover {
+				color: var(--primary-color);
+			}
+
+			.close-menu {
+				position: absolute;
+				top: 2rem;
+				right: 2rem;
+				font-size: 1.7rem;
+				color: white;
+				cursor: pointer;
+				background: none;
+				border: none;
+				opacity: 0;
+				transition: all 0.3s ease;
+				transform: rotate(0deg);
+			}
+
+			.mobile-menu.active .close-menu {
+				opacity: 1;
+				transform: rotate(180deg);
+			}
+
+			@media (max-width: 1024px) {
+				.partner-grid {
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				.features-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@media (max-width: 768px) {
+				.nav-links,
+				.sign-in-btn-head {
+					display: none;
+				}
+
+				.hamburger {
+					display: block;
+				}
+
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.stats-container {
+					flex-direction: column;
+					gap: 3rem;
+				}
+
+				.footer-content {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+
+				.partner-grid {
+					grid-template-columns: repeat(2, 1fr);
+					justify-items: center;
+				}
+				.footer-section:nth-child(3) {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.stats-media img {
+					width: 390px;
+				}
+				.stat-item h2 {
+					font-size: 3rem;
+				}
+			}
+			.container {
+				max-width: 1200px;
+				margin: 100px auto 50px;
+				background: white;
+				padding: 50px;
+				border-radius: 10px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h1 {
+				text-align: center;
+				font-size: 2.2em;
+				color: #2c3e50;
+				margin-bottom: 20px;
+			}
+
+			h2 {
+				font-size: 1.8em;
+				margin-top: 30px;
+				color: #34495e;
+			}
+
+			h3 {
+				font-size: 1.4em;
+				margin-top: 20px;
+				color: #5d6d7e;
+			}
+
+			p {
+				font-size: 1em;
+				margin-bottom: 15px;
+				text-align: justify;
+			}
+
+			ul {
+				margin-left: 20px;
+			}
+
+			ul li {
+				margin-bottom: 10px;
+			}
+
+			a {
+				color: #007bff;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			.contact {
+				margin-top: 30px;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			@media (max-width: 768px) {
+				.container {
+					padding: 30px;
+					margin: 100px auto 50px;
+				}
+				h1 {
+					font-size: 1.8em;
+				}
+				h2 {
+					font-size: 1.5em;
+				}
+				h3 {
+					font-size: 1.2em;
+				}
+			}
+			.header.scrolled {
+				background-color: #000000; /* Black background when scrolled */
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="logo">
+				<a href="/" style="cursor: pointer">
+					<img
+						src="./images/videoLogo.png"
+						alt="SINGLEAUDIO"
+						style="width: 90px"
+				/></a>
+			</div>
+
+			<nav class="nav-links">
+				<a href="/" class="active">HOME</a>
+				<a href="/terms.html">TERMS & CONDITIONS</a>
+				<a href="/privacy.html">PRIVACY POLICY</a>
+				<a href="/disclaimer.html">DISCLAIMER</a>
+			</nav>
+			<button class="sign-in-btn-head">Log In</button>
+			<button class="hamburger">☰</button>
+		</header>
+
+		<div class="container">
+			<h1>Terms and Conditions</h1>
+
+			<p>
+				Please read these terms and conditions carefully before using Our
+				Service.
+			</p>
+
+			<h2>Interpretation and Definitions</h2>
+
+			<h3>Interpretation</h3>
+			<p>
+				The words with capitalized initials have meanings defined under the
+				following conditions. These definitions shall apply regardless of
+				singular or plural usage.
+			</p>
+
+			<h3>Definitions</h3>
+			<p>For the purposes of these Terms and Conditions:</p>
+			<ul>
+				<li>
+					<strong>Affiliate:</strong> An entity that controls, is controlled by,
+					or is under common control with a party.
+				</li>
+				<li><strong>Country:</strong> Refers to Punjab, India.</li>
+				<li>
+					<strong>Company:</strong> ("We", "Us", "Our") refers to VideoMaxPlay.
+				</li>
+				<li>
+					<strong>Device:</strong> Any device that can access the Service, such
+					as a computer, mobile phone, or tablet.
+				</li>
+				<li><strong>Service:</strong> Refers to the Website.</li>
+				<li>
+					<strong>Third-party Social Media Service:</strong> Any services or
+					content provided by a third-party and made available by the Service.
+				</li>
+				<li>
+					<strong>Website:</strong> VideoMaxPlay, accessible at
+					<a href="https://videomaxplay.com" target="_blank"
+						>https://videomaxplay.com</a
+					>.
+				</li>
+				<li>
+					<strong>You:</strong> The individual accessing or using the Service,
+					or the company or legal entity represented by the individual.
+				</li>
+			</ul>
+
+			<h2>Acknowledgment</h2>
+			<p>
+				These Terms and Conditions govern your use of this Service and establish
+				an agreement between You and the Company. Your access and use of the
+				Service is conditioned upon your acceptance of these Terms and
+				Conditions.
+			</p>
+
+			<h2>Links to Other Websites</h2>
+			<p>
+				Our Service may contain links to third-party websites or services not
+				owned or controlled by the Company. We do not assume responsibility for
+				their content, policies, or practices. Please review their terms before
+				use.
+			</p>
+
+			<h2>Termination</h2>
+			<p>
+				We may terminate or suspend Your access immediately, without notice, for
+				any breach of these Terms.
+			</p>
+
+			<h2>Limitation of Liability</h2>
+			<p>
+				The maximum liability of the Company shall be limited to the amount paid
+				by You for the Service or $100 USD. In no event shall the Company be
+				liable for indirect or consequential damages.
+			</p>
+
+			<h2>"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+			<p>
+				The Service is provided "AS IS" and "AS AVAILABLE," without warranties
+				of any kind. The Company makes no guarantees regarding reliability,
+				accuracy, or security.
+			</p>
+
+			<h2>Governing Law</h2>
+			<p>
+				These Terms shall be governed by the laws of Punjab, India, excluding
+				conflict of law rules.
+			</p>
+
+			<h2>Disputes Resolution</h2>
+			<p>
+				If You have any concerns about the Service, You agree to attempt
+				resolution by contacting the Company first.
+			</p>
+
+			<h2>Changes to These Terms</h2>
+			<p>
+				We reserve the right to modify these Terms at any time. If changes are
+				significant, we will notify You at least 30 days before they take
+				effect.
+			</p>
+
+			<h2>Contact Us</h2>
+			<p class="contact">
+				If you have any questions about these Terms and Conditions, You can
+				contact us:
+				<br />📧 By email:
+				<a href="mailto:info@videomaxplay.com">info@videomaxplay.com</a>
+			</p>
+		</div>
+
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-section">
+					<img src="./images/videoLogo.png" alt="" / style="border-radius:
+					5px;width: 110px;">
+					<!-- <div
+						style="
+							display: flex;
+							align-items: center;
+							gap: 10px;
+							margin: 10px 0px;
+						">
+						<img src="./images/f4.svg" alt="" style="width: 50px" />
+						<img src="./images/f5.svg" alt="" style="width: 50px" />
+					</div>
+
+					<img src="./images/f1.png" alt="" /><br />
+					<img src="./images/f2.png" alt="" /> -->
+					<p style="margin-top: 15px">
+						VideoMaxPlay is dedicated to delivering high-quality <br />audio
+						experiences. From cutting-edge sound <br />technology to seamless
+						music distribution, we help<br />
+						artists and creators amplify their reach.
+					</p>
+				</div>
+				<div style="display: flex; align-items: start; gap: 52px">
+					<div class="footer-section">
+						<!-- <h3>SINGLEAUDIO</h3> -->
+						<!-- <p>
+						Registered office address:<br />
+						7 Bell Yard, London, England, WC2A 2JR<br />
+						Office address: 40-42 Parker St, London WC2B 5PQ, UK
+					</p> -->
+
+						<h3>SUPPORT</h3>
+						<p>
+							Tech. support:<br />
+							info@videomaxplay.com
+						</p>
+					</div>
+
+					<div class="footer-section">
+						<!-- <div>
+						<h3>SERVICES</h3>
+						<a href="#">Music Promotion</a><br />
+						<a href="#">Spotify Promotion</a><br />
+						<a href="#">Spotify Pitching</a>
+					</div> -->
+						<div>
+							<h3>USEFUL LINKS</h3>
+							<a href="/index.html" class="active">HOME</a><br />
+							<a href="/terms.html">TERMS & CONDITIONS</a><br />
+							<a href="/privacy.html">PRIVACY POLICY</a><br />
+							<a href="/disclaimer.html">DISCLAIMER</a><br />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center; margin-top: 65px">
+				2025 © VIDEOMAXPLAY. All rights reserved.
+			</div>
+		</footer>
+		<div class="mobile-menu">
+			<button class="close-menu">×</button>
+			<nav>
+				<a href="/index.html" class="active">HOME</a>
+				<a href="/terms.html">TERMS & CONDITIONS</a>
+				<a href="/privacy.html">PRIVACY POLICY</a>
+				<a href="/disclaimer.html">DISCLAIMER</a>
+			</nav>
+		</div>
+
+		<script>
+			const hamburger = document.querySelector(".hamburger");
+			const mobileMenu = document.querySelector(".mobile-menu");
+			const closeMenu = document.querySelector(".close-menu");
+
+			hamburger.addEventListener("click", () => {
+				mobileMenu.classList.add("active");
+				document.body.style.overflow = "hidden"; // Prevent background scrolling
+			});
+
+			closeMenu.addEventListener("click", () => {
+				mobileMenu.classList.remove("active");
+				document.body.style.overflow = ""; // Restore scrolling
+			});
+		</script>
+		<script
+			src="https://kit.fontawesome.com/a48ea81c5d.js"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
