@@ -130,8 +130,8 @@
 				position: relative;
 				overflow: hidden;
 				background-image: linear-gradient(
-						rgba(0, 0, 0, 0.7),
-						rgba(0, 0, 0, 0.7)
+						rgba(0, 0, 0, 0.8),
+						rgba(0, 0, 0, 0.8)
 					),
 					url("./images/video-bg.jpg");
 				background-size: cover;
@@ -175,12 +175,13 @@
 				padding: 5rem 2.5rem;
 				text-align: center;
 				background-color: var(--dark-bg);
+				min-height: 60vh;
 			}
 
 			.partners h2 {
 				color: var(--primary-color);
 				font-size: 2.5rem;
-				margin-bottom: 3rem;
+				margin-bottom: 2rem;
 			}
 
 			/* .partner-grid {
@@ -201,6 +202,17 @@
 				padding: 2rem 2.5rem;
 				text-align: center;
 				background-color: var(--dark-bg);
+				min-height: 80vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-image: linear-gradient(
+						rgba(0, 0, 0, 0.8),
+						rgba(0, 0, 0, 0.8)
+					),
+					url("./images/video2bg.jpg");
+				background-size: cover;
+				background-position: left center;
 			}
 
 			.features-grid {
@@ -603,6 +615,10 @@
 			<section class="hero">
 				<div class="hero-content">
 					<h1 style="text-align: center">VIDEOMAXPLAY<br /></h1>
+					<p style="font-size: 18px">
+						Stream, discover, and experience unlimited entertainment with
+						seamless playback and top-quality content.
+					</p>
 					<!-- <p>
 						<img src="./images/check.svg" alt="" /> LABELS
 						<img src="./images/check.svg" alt="" /> INDEPENDENT ARTISTS
@@ -611,11 +627,11 @@
 					<!-- <button class="sign-in-btn">Sign up</button> -->
 				</div>
 				<div class="hero-image">
-					<img
+					<!-- <img
 						src="./images/laptop.png"
 						alt="Platform Preview"
-						id="laptop-img" />
-					<img src="./images/phone.png" alt="Platform Preview" id="phone-img" />
+						id="laptop-img" /> -->
+					<!-- <img src="./images/phone.png" alt="Platform Preview" id="phone-img" /> -->
 				</div>
 			</section>
 
@@ -682,15 +698,23 @@
 						<i
 							class="fa-solid fa-globe fa-2xl"
 							style="color: white; scale: 1.5; margin-bottom: 55px"></i>
-						<h3>80+ DSPs DELIVERY</h3>
-						<p>Delivering content effortlessly across all platforms.</p>
+						<h3 style="text-transform: uppercase">Seamless Streaming</h3>
+						<p>
+							Effortlessly delivering high-quality video content to audiences
+							everywhere.
+						</p>
 					</div>
 					<div class="feature-card">
 						<i
-							class="fa-solid fa-music fa-2xl"
+							class="fa-solid fa-video fa-2xl"
 							style="color: white; scale: 1.5; margin-bottom: 55px"></i>
-						<h3>PLAYLIST PROMO</h3>
-						<p>Pitch directly to playlist editors and boost your reach.</p>
+						<h3 style="text-transform: uppercase">
+							Featured Playlist Promotion
+						</h3>
+						<p>
+							Pitch your videos directly to curators and maximize your audience
+							reach.
+						</p>
 					</div>
 					<div class="feature-card">
 						<i
@@ -699,7 +723,7 @@
 						<h3>LIVE HUMAN SUPPORT</h3>
 						<p>Get fast answers to all your questions.</p>
 					</div>
-					<div class="feature-card">
+					<!-- <div class="feature-card">
 						<i
 							class="fa-solid fa-chart-pie fa-2xl"
 							style="color: white; scale: 1.5; margin-bottom: 55px"></i>
@@ -719,11 +743,11 @@
 							style="color: white; scale: 1.5; margin-bottom: 55px"></i>
 						<h3>PARTNER NETWORK</h3>
 						<p>Exclusive Deals from Our Partners</p>
-					</div>
+					</div> -->
 				</div>
 			</section>
 
-			<section class="stats">
+			<!-- <section class="stats">
 				<div class="stats-wrapper">
 					<div class="stats-content">
 						<div class="stats-info">
@@ -753,7 +777,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
 
 		<footer class="footer">
